@@ -1,0 +1,280 @@
+:host {
+  --primary-color : ;
+  --secondary-color : ;
+  --black : ;
+  --white : ;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  background-color: #FEFBF6;
+  color : #323C42;
+  text-align: center;
+  user-select: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  height : 60px;
+  padding: 8px;
+  text-align: left;
+  word-wrap: break-word;
+  max-width: 200px;
+}
+
+th {
+  color : #FEFBF6;
+}
+
+thead {
+  background-color : #49778D; 
+  border-radius : 12px;
+}
+
+tr:has(td){
+  border-radius: 30px;
+}
+
+td {
+  max-width: 200px; /* Optional: set the maximum width of each column */
+  border-top: 1px solid rgba(2, 49, 93, .3); /* Border color with opacity 0.5 for bottom */
+  border-bottom: 1px solid rgba(2, 49, 93, .3); /* Border color with opacity 0.5 for bottom */
+}
+
+
+h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  text-align: justify;
+}
+
+.my-nav-bar{
+  background-color: #7F5283; 
+  height: 70px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.drop-area.active {
+  border: 2px solid #9afd81 !important;
+}
+
+.my-button {
+  background-color: #2D2F54; /* Idle color */
+  cursor: pointer;
+  border: none;
+  transition: background-color 0s;
+}
+
+.my-button:hover, .my-button:active{
+  background-color: #454880 !important;
+  border : none;
+  box-shadow : none;
+}
+
+.my-button:focus{
+  border : none;
+  box-shadow : none;
+}
+
+.my-link {
+  color: #2D2F54 !important;
+  cursor: pointer ;
+  border: none !important;
+  transition: color 2s ease;
+  text-decoration: none !important;
+}
+
+.my-link:hover {
+  opacity : .8 !important;
+  text-decoration: none !important;
+}
+
+.my-nav-link.ods-nav-link{
+  color: #512D54;
+  cursor: pointer;
+  border: none;
+  transition: color 0.5s ease;
+  
+}
+
+.my-nav-link {
+  color: #512D54;
+  cursor: pointer;
+  border: none;
+  transition: color 0.5s ease;
+}
+
+.my-nav-link.disable {
+  cursor: default;
+  pointer-events: none;
+  color: #f9f9fa;
+}
+
+.my-nav-link:hover {
+  color: #f9f9fa !important;
+  text-decoration: none;
+}
+
+
+.hidden {
+  display : none !important;
+}
+
+.partition-option, .database-option{
+  transform: scale(0.9);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Smoothing the hover transition */
+}
+
+.partition-option:hover, .database-option:hover{
+  transform: scale(1);
+  opacity: 1;
+}
+
+.database-option-clicked{
+  transform: scale(1);
+  opacity: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button-profile {
+  background : #79507C !important;
+  border : 0;
+}
+
+.button-profile:hover{
+  background : #512D54 !important;
+  color : #F9F9FA;
+}
+
+.button-profile:focus{
+  background : #512D54 !important;
+  color : #F9F9FA;
+}
+
+
+.pop-up {
+  transition: opacity 1s ease, transform 1s ease;
+  animation : popUp 2s;
+}
+
+@keyframes popUp{
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.data {
+  border-radius: 8px; 
+  border: 1px solid rgba(32, 34, 43, 0.15); 
+  color: #3E3D43;
+  cursor : pointer;
+  transition: transform 0.1s ease;
+}
+
+.data:hover {
+  transform: scale(1.05);
+  background-color : #CBEEFF;
+}
+
+.search-data-get {
+  background-color : #F3F3F3;
+  width:33%; 
+  border-radius: 15px; 
+  height: 50px;
+}
+
+.search-data-query {
+  background-color : #F3F3F3;
+  width:33%; 
+  border-radius: 15px; 
+  height: 60px;
+}
+
+.search-data-query:focus {
+  outline : none;
+  box-shadow : none;
+}
+
+.form-control:focus{
+  outline : none;
+  box-shadow : none;
+}
+
+.database-button {
+  display : inline-block;
+  font-weight: normal;
+  cursor : none;
+  pointer-events : none;
+  opacity : 0;
+  font-size : 16px;
+}
+
+.database-button-link {
+  transition: color 0.2s ease, opacity 0.2s ease ,transform 0.2s ease;
+  animation : database-button-animation 0.2s;
+  pointer-events : auto;
+  cursor : pointer;
+  font-weight: bold;
+  transform : scale(1.05);
+  font-size : 16px;
+}
+
+@keyframes database-button-animation{
+  0% {
+    opacity : 0.25;
+    font-weight: normal;
+    cursor : none ;
+    pointer-events : none;
+  }
+  100% {
+    pointer-events : auto;
+    cursor : pointer;
+    font-weight: bold;
+    opacity : 1;
+    transform : scale(1.05);
+  }
+}
+
+.error-message {
+  font-size: small;
+  color: #CC0000;
+  font-weight: normal;
+  opacity: 1;
+  scale: 1;
+}
+
+.pulse-animation {
+  animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    scale : 1.05;
+    font-weight: normal;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.trash-logo{
+  width: 25px; 
+  cursor: pointer;
+}
+
